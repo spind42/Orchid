@@ -1,3 +1,16 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlinx-serialization") {
+                useModule("org.jetbrains.kotlin:kotlin-serialization:${requested.version}")
+            } else if (requested.id.id == "kotlin-dce-js") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
+enableFeaturePreview("GRADLE_METADATA")
+
 buildscript {
     repositories {
         maven { url 'https://plugins.gradle.org/m2/' }
@@ -52,3 +65,5 @@ include 'bundles:OrchidAll'
 include 'bundles:OrchidBlog'
 include 'bundles:OrchidDocs'
 include 'bundles:OrchidLanguagePack'
+
+include 'plugins:OrchidSearch:widget'

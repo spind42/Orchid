@@ -84,6 +84,7 @@ constructor(
             addCss("assets/css/orchidSearch.scss")
             addJs("https://unpkg.com/lunr/lunr.js")
             addJs("assets/js/orchidSearch.js")
+            addJs("assets/js/orchidSearch-kt.js")
         }
     }
 

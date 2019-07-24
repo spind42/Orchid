@@ -22,7 +22,7 @@ ext {
     jsoupVersion = '1.12.1'
     junitVersion = '5.4.2'
     jythonVersion = '2.7.1'
-    kotlin_version = '1.3.31'
+    kotlin_version = '1.3.41'
     mockitoVersion = '2.+'
     nanohttpdVersion = '2.3.1'
     okhttpVersion = '3.14.2'
