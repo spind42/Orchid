@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="homepage">
+<head>
+{% include '?trackingHeadStart' %}
+{% head %}
+{% styles %}
+{% include '?trackingHeadEnd' %}
+</head>
+<body class="has-navbar-fixed-top">
+{% include '?trackingBodyStart' %}
+{% include 'includes/copper/navbar' with {'menu': theme.menu, 'navbarClasses': 'is-white', 'navbarLogo': 'assets/svg/orchid/logo_left_light.svg'} %}
+{% embed 'includes/componentHolder' with {"componentHolder": page.components} %}
+{% block componentWrapper %}
+<section
+  class="
+    section
+    has-background-{{ component.backgroundColor|default("light") }}
+    is-{{ component.sectionSize }}
+    component
+    component-{{ component.type }}
+    component-order-{{ component.order }}"
+  >
+  <div class="container content is-medium">
+  {{ component.renderContent(page.context, page) | raw }}
+  </div>
+</section>
+{% endblock %}
+{% block componentNoWrapper %}{% endblock %}
+{% endembed %}
+{% block footer %}
+<footer class="footer has-background-white">
+  <div class="content is-small">
+  {% include 'includes/footer.peb' %}
+  </div>
+</footer>
+{% endblock %}
+{% scripts %}
+{% include '?trackingBodyEnd' %}
+</body>
+</html>

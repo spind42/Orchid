@@ -1,12 +1,7 @@
-sourceDirs:
-  - '../../main/kotlin'
-  - '../../main/java'
-
-classPages:
-  menu:
-    - type: 'separator'
-      title: 'Class Info'
-      order: 100
-    - type: 'kotlindocClassLinks'
-      includeItems: true
-      order: 110
+modules:
+  - name: 'OrchidCore'
+    sourceDirs:
+      - '../../main/kotlin'
+      - '../../main/java'
+  - name: 'OrchidTest'
+    sourceDirs: '../../../../OrchidTest/src/main/kotlin'
