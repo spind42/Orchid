@@ -12,12 +12,14 @@ import kotlinx.html.p
 import kotlinx.html.span
 import kotlinx.html.sup
 import kotlinx.html.unsafe
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable
 import strikt.api.expectThat
 
 @DisplayName("Tests behavior of using Bible verse functions")
+@Disabled
 class BibleTest : OrchidIntegrationTest(withGenerator<HomepageGenerator>()) {
 
     @Test
