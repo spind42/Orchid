@@ -19,6 +19,7 @@ include 'themes:OrchidEditorial'
 include 'themes:OrchidFutureImperfect'
 
 include 'plugins:OrchidChangelog'
+include 'plugins:OrchidConfluenceCollector'
 include 'plugins:OrchidForms'
 include 'plugins:OrchidGroovydoc'
 include 'plugins:OrchidJavadoc'
